@@ -1,0 +1,75 @@
+//Doc
+//
+//
+
+public class Invoice
+{
+  private String partno;
+  private String desc; 
+  private int quantity;
+  private double price;
+  
+  public Invoice()
+  {
+    // Default Constructor
+  }
+  // Constructor with all members as parameters
+  public Invoice(String partno, String desc, int quantity, double price)
+  {
+    this.partno = partno;
+    this.desc = desc;
+    this.quantity = quantity;
+    this.price = price;
+  }
+  // set function for part numnber member
+  public void setPartno(String partno)
+  {
+    this.partno = partno;
+  }
+  // get function for part number member
+  public String getPartno()
+  {
+    return partno;
+  }
+  // set function for part description member
+  public void setDesc(String desc)
+  {
+    this.desc = desc;
+  }
+  // get function for part description 
+  public String getDesc()
+  {
+    return desc;
+  }
+  // set function for part quantity member
+  public void setQuantity(int quantity)
+  {
+    this.quantity = quantity;
+  }
+  // get function for part quantity member
+  public int getQuantity()
+  {
+    return quantity;
+  }
+  // set function for part price member
+  public void setPrice(double price)
+  {
+    this.price = price;
+  }
+  // get function for part price member
+  public double getPrice()
+  {
+    return price;
+  }
+  public double getInvoiceAmount()
+  {
+    if(quantity < 0 || price < 0)
+    {
+      return 0.0;
+    }
+    else
+    {
+      return (price * quantity);
+    }
+  }
+}
